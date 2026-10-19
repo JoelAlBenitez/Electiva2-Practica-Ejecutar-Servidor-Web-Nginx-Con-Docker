@@ -1,0 +1,10 @@
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: servidor-nginx-Joel-Benitez
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/usr/share/nginx/html:ro
+    restart: unless-stopped
